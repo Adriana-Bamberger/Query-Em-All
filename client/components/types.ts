@@ -22,3 +22,7 @@ export interface PokemonCardProps {
 export interface PokemonResult {
   url: string;
 }
+
+export interface PokemonDetailsProps {
+  nameOrId: string;
+}
