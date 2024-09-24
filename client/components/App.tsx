@@ -12,11 +12,11 @@ const App: React.FC = () => {
     const fetchPokemonList = async () => {
       try {
         const response = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=151');
-        const pokemons = await Promise.all(response.data.results.map(async (pokemon: PokemonResult) => {
+        const pokemondata = await Promise.all(response.data.results.map(async (pokemon: PokemonResult) => {
           const pokemonResponse = await axios.get(pokemon.url);
           return pokemonResponse.data;
         }));
-        setPokemons(pokemons);
+        setPokemons(pokemondata);
       } catch (error) {
         console.error(error);
       }
