@@ -29,17 +29,15 @@ const App: React.FC = () => {
   // };
 
   return (
-    <div>
-      <h1 className="text-pink-500">Pokémon Index</h1>
-      <ul>
-        {pokemons.map((pokemon) => (
-          <li key={pokemon.name}>
-            <PokemonCard pokemon={pokemon} />
-            <button onClick={() => handlePokemonSelect(pokemon.name)}>View Details</button>
-          </li>
-        ))}
-      </ul>
-      {selectedPokemon && <PokemonDetails nameOrId={selectedPokemon} />}
+    <div className='bg-yellow-50'>
+      <h1 className="text-3xl text-blue-800 font-bold p-4 text-center">Pokémon Index</h1>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4'>
+          {pokemons.map((pokemon) => (
+              <div key={pokemon.name} className="p-4 bg-white rounded-lg shadow-md">
+                <PokemonCard pokemon={pokemon} />
+               </div>
+            ))}
+      </div>
       {/* {selectedPokemon && <PokemonDetails nameOrId={selectedPokemon} />} */}
     </div>
   );
