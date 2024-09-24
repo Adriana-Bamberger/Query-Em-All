@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import PokemonCard from './PokemonCard';
-import PokemonDetails from './PokemonDetails';
+// import PokemonDetails from './PokemonDetails';
 import { Pokemon, PokemonResult } from './types';
 
 const App: React.FC = () => {
   const [pokemons, setPokemons] = useState<Pokemon[]>([]);
-  const [selectedPokemon, setSelectedPokemon] = useState<string | null>(null);
+  // const [selectedPokemon, setSelectedPokemon] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchPokemonList = async () => {
@@ -24,9 +24,9 @@ const App: React.FC = () => {
     fetchPokemonList();
   }, []);
 
-  const handlePokemonSelect = (nameOrId: string) => {
-    setSelectedPokemon(nameOrId);
-  };
+  // const handlePokemonSelect = (nameOrId: string) => {
+  //   setSelectedPokemon(nameOrId);
+  // };
 
   return (
     <div>
@@ -40,6 +40,7 @@ const App: React.FC = () => {
         ))}
       </ul>
       {selectedPokemon && <PokemonDetails nameOrId={selectedPokemon} />}
+      {/* {selectedPokemon && <PokemonDetails nameOrId={selectedPokemon} />} */}
     </div>
   );
 };
