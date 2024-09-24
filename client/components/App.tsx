@@ -12,6 +12,9 @@ const App = () => {
   } = useQuery({ queryKey: ['greeting', count], queryFn: getGreeting })
 
   if (isPending) return <p>Loading...</p>
+  const handlePokemonSelect = (nameOrId: string) => {
+    setSelectedPokemon(nameOrId);
+  };
 
   return (
     <>
@@ -26,5 +29,20 @@ const App = () => {
     </>
   )
 }
+    <div>
+      <h1 className="text-pink-500">Pokémon Index</h1>
+      <ul>
+        {pokemons.map((pokemon) => (
+          <li key={pokemon.name}>
+            <PokemonCard pokemon={pokemon} />
+            <button onClick={() => handlePokemonSelect(pokemon.name)}>View Details</button>
+          </li>
+        ))}
+      </ul>
+      {selectedPokemon && <PokemonDetails nameOrId={selectedPokemon} />}
+    </div>
+  );
+};
 
 export default App
+export default App;
