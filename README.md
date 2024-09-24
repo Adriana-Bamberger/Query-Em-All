@@ -1,3 +1,4 @@
+![image](https://github.com/user-attachments/assets/7ff9a811-587d-4137-93b0-4d67842d1c91)
 # Query-em-all
 
 This is a very basic Pokedex that uses Vite to bundle a React app and tailwind for simple styling.
