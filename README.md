@@ -1,26 +1,16 @@
-# Boilerplate: React with Express, Vite and Tailwind
+# Query-em-all
 
-This is a starter project that uses Vite to bundle a React app and Express to serve it in production. Express is used in development to serve an API server. Tailwind is installed for styling.
+This is a very basic Pokedex that uses Vite to bundle a React app and tailwind for simple styling.
+Due to time constraints it is not reprsentive of what I would like to have built, or what I believe I am capable of building, But I think it's a pretty good starting point for the about 2 hours of work I had available.
 
-Vite React App: [http://localhost:5173](http://localhost:5173)
-Express API Server: [http://localhost:3000](http://localhost:3000)
-
-Requests to `http://localhost:5173/api` are proxied to `http://localhost:3000/api`.
-
-## Setup
-
-- Use this template to create a new repo.
-- Rename your repo according to the app you're building
 
 ### Installation
 
 Clone the new repo to your local machine
 
-```sh
-git clone https://github.com/[your-account]/[your-app].git
-cd [your-app] && npm i
-```
-
 To start the development server with a watcher that rebuilds your code, run `npm run dev`.
 
----
+## Notes from Creation.
+ 
+Using both interface and type is not necessary in this case, and using only interface is a more consistent and idiomatic approach in TypeScript.
+However, there are cases where using type can be useful, such as when defining a union type or an intersection type.
