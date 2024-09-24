@@ -14,3 +14,5 @@ To start the development server with a watcher that rebuilds your code, run `npm
  
 Using both interface and type is not necessary in this case, and using only interface is a more consistent and idiomatic approach in TypeScript.
 However, there are cases where using type can be useful, such as when defining a union type or an intersection type.
+
+Functionality to see more details on the pokemons is currently comment out, this is one of a few ways I coud think to do this.
